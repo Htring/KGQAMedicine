@@ -1,2 +1,2 @@
-# KGQAMedicia
+# KGQAMedicine
 以疾病为中心的一定规模医药领域知识图谱的问答系统
