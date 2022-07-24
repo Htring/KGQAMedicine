@@ -117,7 +117,7 @@ class RuleQuestionClassifier(object):
         self.sub_classify(self.cause_qwds, question, 'disease', region_word_kinds, question_kinds, "disease_cause")
         # disease accompany
         self.sub_classify(self.acompany_qwds, question, 'disease', region_word_kinds, question_kinds,
-                          "disease_accompany")
+                          "disease_acompany")
         # disease food
         if self.check_words(self.food_qwds, question) and 'disease' in region_word_kinds:
             deny_status = self.check_words(self.deny_feature_words, question)
@@ -165,9 +165,6 @@ class RuleQuestionClassifier(object):
         return classify_res
 
     def sub_classify(self, kind_qkwds, question, key, region_word_kinds, question_kinds, kind_type):
-        # print(f"question {question}, key {key} kind_type {kind_type}")
-        # print(self.check_words(kind_qkwds, question))
-        # print(key in region_word_kinds)
         if self.check_words(kind_qkwds, question) and (key in region_word_kinds):
             question_kinds.append(kind_type)
 

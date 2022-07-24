@@ -80,8 +80,8 @@ class RawAnswerSearcher(object):
             final_answer = '{0},熟悉一下：{1}'.format(subject, '；'.join(list(set(desc))[:self.num_limit]))
 
         elif question_kind == 'disease_acompany':
-            desc1 = [i['n.name'] for i in answers]
-            desc2 = [i['m.name'] for i in answers]
+            desc1 = [i['n.name'] for i in answers if "n.name" in i]
+            desc2 = [i['m.name'] for i in answers if 'm.name' in i]
             subject = answers[0]['m.name']
             desc = [i for i in desc1 + desc2 if i != subject]
             final_answer = '{0}的症状包括：{1}'.format(subject, '；'.join(list(set(desc))[:self.num_limit]))
