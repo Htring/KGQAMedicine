@@ -20,7 +20,7 @@
 
 ## 程序运行
 
-环境准备：可以有选择地常见一个虚拟环境，然后安装程序运行所需要的包：`pip install -r requirmetns.txt`
+环境准备：可以有选择地常见一个虚拟环境，然后安装程序运行所需要的包：`pip install -r requirments.txt`
 
 知识库准备：再将知识库数据导入到neo4j数据库之前，需要根据自己的情况，在KGQAMedicine中配置相关参数, 然后执行`python build_medicine_graph.py`将原项目爬取的数据导入到neo4j数据库中。
 
